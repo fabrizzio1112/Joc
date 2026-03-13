@@ -43,6 +43,7 @@ public class PlayerMovement : MonoBehaviour
         if (collision.CompareTag("Coin"))
         {
             gm.AddScore(10);
+            gm.CoinCollected();
             Destroy(collision.gameObject); // Destruye la moneda
         }
         else if (collision.CompareTag("Spike"))
